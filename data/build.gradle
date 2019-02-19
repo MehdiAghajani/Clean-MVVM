@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':domain')
+
+    def appDependencies = rootProject.ext.dependencies
+
+    api appDependencies.dagger
+
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

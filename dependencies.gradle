@@ -13,6 +13,9 @@ ext {
 
     final supportVersion = '1.0.0'
 
+    final daggerVersion = '2.16'
+
+
 
     //Test
     final junitVersion      = '4.12'
@@ -30,7 +33,13 @@ ext {
 
 
             //Android Support
-            supportAppCompat     : "androidx.appcompat:appcompat:$supportVersion"
+            supportAppCompat     : "androidx.appcompat:appcompat:$supportVersion",
+
+            //Dagger
+            dagger               : "com.google.dagger:dagger:$daggerVersion",
+            daggerCompiler       : "com.google.dagger:dagger-compiler:$daggerVersion",
+            daggerAndroid        : "com.google.dagger:dagger-android-support:$daggerVersion",
+            daggerAndroidCompiler: "com.google.dagger:dagger-android-processor:$daggerVersion"
 
     ]
 

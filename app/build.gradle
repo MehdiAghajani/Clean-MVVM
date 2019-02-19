@@ -31,10 +31,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation project(':domain')
+
+
     def appDependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies
 
-    implementation appDependencies.kotlin
+
     implementation appDependencies.supportAppCompat
 
 

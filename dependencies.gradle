@@ -8,7 +8,8 @@ ext {
     androidMinSdkVersion = 18
     androidTargetSdkVersion = 28
     androidCompileSdkVersion = 28
-    
+
+    final Coroutine = '1.1.0'
 
     final supportVersion = '1.0.0'
 
@@ -24,6 +25,8 @@ ext {
 
             //Kotlin
             kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            coroutine            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$Coroutine",
+            coroutineAndroid     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$Coroutine",
 
 
             //Android Support

@@ -1,49 +1,33 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId "io.github.MehdiAghajani.clean"
         minSdkVersion rootProject.ext.androidMinSdkVersion
         targetSdkVersion rootProject.ext.androidTargetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary true
-    }
 
-    dataBinding {
-        enabled = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
-        debug {}
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation project(':domain')
     implementation project(':data')
-    implementation project(':remote')
-    implementation project(':cache')
-
-
 
     def appDependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies
-
-
-    implementation appDependencies.supportAppCompat
-
 
     testImplementation testDependencies.junit
 }

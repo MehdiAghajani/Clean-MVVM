@@ -1,4 +1,4 @@
-package digital.kian.clean_mvvm_architecture
+package io.github.MehdiAghajani
 
 import org.junit.Test
 

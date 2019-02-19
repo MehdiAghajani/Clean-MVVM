@@ -1,4 +1,4 @@
-package digital.kian.clean_mvvm_architecture
+package io.github.MehdiAghajani
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("digital.kian.clean_mvvm_architecture", appContext.packageName)
+        assertEquals("io.github.MehdiAghajani.clean", appContext.packageName)
     }
 }

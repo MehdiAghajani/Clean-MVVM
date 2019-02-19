@@ -12,8 +12,10 @@ ext {
     final Coroutine = '1.1.0'
 
     final supportVersion = '1.0.0'
-
     final daggerVersion = '2.16'
+    final okHttp = '3.11.0'
+    final retrofit = '2.4.0'
+    final coroutineAdapter = '0.9.2'
 
 
 
@@ -39,7 +41,15 @@ ext {
             dagger               : "com.google.dagger:dagger:$daggerVersion",
             daggerCompiler       : "com.google.dagger:dagger-compiler:$daggerVersion",
             daggerAndroid        : "com.google.dagger:dagger-android-support:$daggerVersion",
-            daggerAndroidCompiler: "com.google.dagger:dagger-android-processor:$daggerVersion"
+            daggerAndroidCompiler: "com.google.dagger:dagger-android-processor:$daggerVersion",
+
+            //Retrofit
+            retrofit             : "com.squareup.retrofit2:retrofit:$retrofit",
+            retrofitGson         : "com.squareup.retrofit2:converter-gson:$retrofit",
+            retrofitCoroutine    : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutineAdapter",
+
+            //OkHttp
+            okHttpInterceptor    : "com.squareup.okhttp3:logging-interceptor:$okHttp"
 
     ]
 

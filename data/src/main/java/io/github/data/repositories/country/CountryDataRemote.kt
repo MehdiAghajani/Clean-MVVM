@@ -1,9 +1,8 @@
 package io.github.data.repositories.country
 
-import io.github.domain.model.DomainCountryModel
-import kotlinx.coroutines.Deferred
+import io.github.data.model.DataCountryModel
 
 interface CountryDataRemote
 {
-    fun getCountryList(): Deferred<List<DomainCountryModel>>
+    suspend fun getCountryList(): List<DataCountryModel>
 }

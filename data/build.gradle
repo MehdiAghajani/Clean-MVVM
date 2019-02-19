@@ -9,7 +9,9 @@ dependencies {
 
     def appDependencies = rootProject.ext.dependencies
 
-    api appDependencies.dagger
+    implementation appDependencies.kotlin
+    implementation appDependencies.coroutine
+    implementation appDependencies.dagger
 
 }
 

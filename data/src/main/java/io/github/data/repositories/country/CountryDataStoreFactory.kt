@@ -5,5 +5,5 @@ import javax.inject.Inject
 class CountryDataStoreFactory
 @Inject constructor(private val remote: CountryDataRemote)
 {
-    fun getCountryList() = remote.getCountryList()
+    suspend fun getCountryList() = remote.getCountryList()
 }

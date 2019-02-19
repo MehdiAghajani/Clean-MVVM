@@ -1,0 +1,45 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    androidMinSdkVersion = 18
+    androidTargetSdkVersion = 28
+    androidCompileSdkVersion = 28
+    
+
+    final supportVersion = '1.0.0'
+
+
+    //Test
+    final junitVersion      = '4.12'
+    final testRunnerVersion = '1.1.0-alpha4'
+    final esperessoVersion  = '3.1.0-alpha4'
+
+
+
+    dependencies = [
+
+            //Kotlin
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+
+
+            //Android Support
+            supportAppCompat     : "androidx.appcompat:appcompat:$supportVersion"
+
+    ]
+
+    testDependencies = [
+
+            //JUnit
+            junit                : "junit:junit:$junitVersion",
+
+            //Support Test Runner
+            testRunner           : "androidx.test:runner:$testRunnerVersion",
+
+            //Esperesso
+            esperesso            : "androidx.test.espresso:espresso-core:$esperessoVersion"
+    ]
+}

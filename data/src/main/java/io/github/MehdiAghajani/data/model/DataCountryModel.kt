@@ -1,7 +1,6 @@
-package io.github.domain.model
+package io.github.MehdiAghajani.data.model
 
-
-data class DomainCountryModel(
+data class DataCountryModel(
     val name: String,
     val alpha2_code: String,
     val alpha3_code: String

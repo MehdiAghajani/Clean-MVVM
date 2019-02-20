@@ -1,7 +1,7 @@
 package io.github.MehdiAghajani.remote.mapper
 
 import io.github.MehdiAghajani.remote.model.CountryResponse
-import io.github.data.model.DataCountryModel
+import io.github.MehdiAghajani.data.model.DataCountryModel
 import javax.inject.Inject
 
 class CountryMapper @Inject constructor(): EntityMapper<CountryResponse, List<DataCountryModel>>

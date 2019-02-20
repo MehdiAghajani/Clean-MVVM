@@ -1,6 +1,6 @@
-package io.github.domain.model.wrapper
+package io.github.MehdiAghajani.domain.model.wrapper
 
-import io.github.domain.model.error.ErrorModel
+import io.github.MehdiAghajani.domain.model.error.ErrorModel
 
 sealed class APIResponse<out T>
 data class SuccessResponse<out T>(val value: T): APIResponse<T>()

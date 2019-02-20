@@ -1,4 +1,4 @@
-package io.github.domain.model.error
+package io.github.MehdiAghajani.domain.model.error
 
 
 data class ErrorModel(

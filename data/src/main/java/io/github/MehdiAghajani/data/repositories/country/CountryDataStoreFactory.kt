@@ -1,4 +1,4 @@
-package io.github.data.repositories.country
+package io.github.MehdiAghajani.data.repositories.country
 
 import javax.inject.Inject
 

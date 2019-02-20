@@ -1,4 +1,4 @@
-package io.github.data.mapper
+package io.github.MehdiAghajani.data.mapper
 
 
 interface Mapper<E, D> {

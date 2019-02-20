@@ -45,9 +45,6 @@ dependencies {
     implementation appDependencies.coroutine
     implementation appDependencies.coroutineAndroid
 
-    implementation appDependencies.ArchLifeCycle
-    implementation appDependencies.ArchReactiveStreams
-
     implementation appDependencies.support
     implementation appDependencies.supportAppCompat
     implementation appDependencies.supportDesign
@@ -57,8 +54,6 @@ dependencies {
     implementation appDependencies.daggerAndroid
     kapt appDependencies.daggerCompiler
     kapt appDependencies.daggerAndroidCompiler
-
-    implementation appDependencies.stetho
 
     testImplementation testDependencies.junit
 }

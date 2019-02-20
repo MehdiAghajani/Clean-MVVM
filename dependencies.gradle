@@ -16,6 +16,8 @@ ext {
     final okHttp = '3.11.0'
     final retrofit = '2.4.0'
     final coroutineAdapter = '0.9.2'
+    final stetho = '1.4.2'
+
 
 
 
@@ -49,7 +51,11 @@ ext {
             retrofitCoroutine    : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutineAdapter",
 
             //OkHttp
-            okHttpInterceptor    : "com.squareup.okhttp3:logging-interceptor:$okHttp"
+            okHttpInterceptor    : "com.squareup.okhttp3:logging-interceptor:$okHttp",
+
+            //Stetho
+            stetho               : "com.facebook.stetho:stetho:$stetho",
+            stetho_OkHttp        : "com.facebook.stetho:stetho-okhttp3:$stetho"
 
     ]
 

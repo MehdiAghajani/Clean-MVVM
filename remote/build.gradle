@@ -19,8 +19,6 @@ dependencies {
 
     implementation appDependencies.dagger
 
-    implementation appDependencies.okHttpInterceptor
-
     testImplementation testDependencies.junit
 
 }

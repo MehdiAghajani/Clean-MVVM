@@ -5,7 +5,7 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.Route
 
-class TokenAuhtenticator : Authenticator
+class TokenAuthenticator : Authenticator
 {
     override fun authenticate(route: Route, response: Response): Request? {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
@@ -29,21 +31,34 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     implementation project(':domain')
     implementation project(':data')
-    implementation project(':remote')
     implementation project(':cache')
-
-
+    implementation project(':remote')
 
     def appDependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies
 
+    implementation appDependencies.kotlin
+    implementation appDependencies.coroutine
+    implementation appDependencies.coroutineAndroid
 
+    implementation appDependencies.ArchLifeCycle
+    implementation appDependencies.ArchReactiveStreams
+
+    implementation appDependencies.support
     implementation appDependencies.supportAppCompat
+    implementation appDependencies.supportDesign
+    implementation appDependencies.constraintLayout
 
+    implementation appDependencies.dagger
+    implementation appDependencies.daggerAndroid
+    kapt appDependencies.daggerCompiler
+    kapt appDependencies.daggerAndroidCompiler
+
+    implementation appDependencies.stetho
 
     testImplementation testDependencies.junit
 }

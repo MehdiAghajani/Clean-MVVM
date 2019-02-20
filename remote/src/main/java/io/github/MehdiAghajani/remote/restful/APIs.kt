@@ -6,7 +6,6 @@ import retrofit2.http.GET
 
 interface APIs {
 
-    //http://services.groupkt.com/country/get/all
     @GET("/country/get/all")
     fun getCountryList(): Deferred<CountryResponse>
 }

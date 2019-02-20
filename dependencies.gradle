@@ -12,7 +12,9 @@ ext {
     final Coroutine = '1.1.0'
 
     final supportVersion = '1.0.0'
+    final constraintVersion = '2.0.0-alpha2'
     final daggerVersion = '2.16'
+    final archVersion = '2.0.0'
     final okHttp = '3.11.0'
     final retrofit = '2.4.0'
     final coroutineAdapter = '0.9.2'
@@ -35,9 +37,16 @@ ext {
             coroutine            : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$Coroutine",
             coroutineAndroid     : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$Coroutine",
 
+            //ARCH
+            ArchLifeCycle        : "androidx.lifecycle:lifecycle-extensions:$archVersion",
+            ArchReactiveStreams  : "androidx.lifecycle:lifecycle-reactivestreams:$archVersion",
 
             //Android Support
+            support              : "androidx.legacy:legacy-support-v4:$supportVersion",
             supportAppCompat     : "androidx.appcompat:appcompat:$supportVersion",
+            constraintLayout     : "androidx.constraintlayout:constraintlayout:$constraintVersion",
+            supportDesign        : "com.google.android.material:material:$supportVersion",
+
 
             //Dagger
             dagger               : "com.google.dagger:dagger:$daggerVersion",

@@ -1,4 +1,4 @@
-package io.github.MehdiAghajani.presentation.viewModel
+package io.github.MehdiAghajani.presentation.viewModel.base
 
 enum class ViewModelScope {
     ACTIVITY,

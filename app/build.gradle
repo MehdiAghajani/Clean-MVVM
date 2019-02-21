@@ -20,6 +20,9 @@ android {
     dataBinding {
         enabled = true
     }
+    androidExtensions {
+        experimental = true
+    }
 
     buildTypes {
         debug {}
@@ -35,6 +38,13 @@ android {
     }
 }
 
+
+kotlin {
+    experimental {
+        coroutines 'enable'
+    }
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
@@ -43,6 +53,8 @@ dependencies {
     implementation project(':cache')
     implementation project(':remote')
     implementation project(':presentation')
+
+    //kapt "com.android.databinding:compiler:$android_plugin_version"
 
     def appDependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies

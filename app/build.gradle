@@ -8,7 +8,7 @@ android {
     compileSdkVersion rootProject.ext.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId "io.github.MehdiAghajani.clean"
+        applicationId "io.github.mehdi.clean"
         minSdkVersion rootProject.ext.androidMinSdkVersion
         targetSdkVersion rootProject.ext.androidTargetSdkVersion
         versionCode 1
@@ -38,12 +38,6 @@ android {
     }
 }
 
-
-kotlin {
-    experimental {
-        coroutines 'enable'
-    }
-}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

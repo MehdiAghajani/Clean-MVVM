@@ -1,13 +1,14 @@
-package io.github.mehdi.presentation.di.builder
+package io.github.mehdi.clean.di.builder
 
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
-import io.github.mehdi.presentation.viewModel.ViewModelsProvider
-import io.github.mehdi.presentation.viewModel.base.AppViewModelFactory
+import io.github.mehdi.presentation.presenters.ViewModelsProvider
+import io.github.mehdi.presentation.presenters.base.AppViewModelFactory
 
 @Module(
     includes = [
+        NavigatorBuilder::class,
         ViewModelsProvider::class
     ]
 )

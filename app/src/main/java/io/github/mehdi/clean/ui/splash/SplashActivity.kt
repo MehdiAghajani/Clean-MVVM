@@ -1,9 +1,10 @@
-package io.github.mehdi.clean.ui
+package io.github.mehdi.clean.ui.splash
 
 import io.github.mehdi.clean.R
 import io.github.mehdi.clean.databinding.ActivitySplashBinding
 import io.github.mehdi.clean.ui.base.BaseActivity
-import io.github.mehdi.presentation.viewModel.splash.SplashViewModel
+import io.github.mehdi.clean.util.image.GlideApp
+import io.github.mehdi.presentation.presenters.splash.SplashViewModel
 
 class SplashActivity: BaseActivity<SplashViewModel, ActivitySplashBinding>()
 {
@@ -12,5 +13,11 @@ class SplashActivity: BaseActivity<SplashViewModel, ActivitySplashBinding>()
 
     override fun onViewInitiailized(binding: ActivitySplashBinding) {
         binding.viewModel = viewModel
+        GlideApp
+            .with(this)
+            .load(R.drawable.android_pie_logo)
+            .into(binding.imgPie)
+
+        viewModel.openMainPage()
     }
 }

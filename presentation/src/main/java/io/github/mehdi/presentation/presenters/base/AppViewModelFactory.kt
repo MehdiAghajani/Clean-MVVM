@@ -1,4 +1,4 @@
-package io.github.mehdi.presentation.viewModel.base
+package io.github.mehdi.presentation.presenters.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

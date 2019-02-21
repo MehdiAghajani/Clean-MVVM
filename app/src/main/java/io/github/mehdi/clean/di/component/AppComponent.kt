@@ -7,7 +7,7 @@ import dagger.android.support.AndroidSupportInjectionModule
 import io.github.mehdi.clean.app.CleanApplication
 import io.github.mehdi.clean.di.builder.ActivityBuilder
 import io.github.mehdi.clean.di.module.AppModule
-import io.github.mehdi.presentation.di.builder.ViewModelBuilder
+import io.github.mehdi.clean.di.builder.ViewModelBuilder
 import io.github.mehdi.remote.di.module.NetworkModule
 import javax.inject.Singleton
 

@@ -12,8 +12,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import dagger.android.support.AndroidSupportInjection
-import io.github.mehdi.presentation.viewModel.base.ViewModelScope
-import io.github.mehdi.presentation.viewModel.base.BaseViewModel
+import io.github.mehdi.presentation.presenters.base.ViewModelScope
+import io.github.mehdi.presentation.presenters.base.BaseViewModel
 import javax.inject.Inject
 
 abstract class BaseFragment<V: BaseViewModel, B: ViewDataBinding>: Fragment(), BaseView<V, B>

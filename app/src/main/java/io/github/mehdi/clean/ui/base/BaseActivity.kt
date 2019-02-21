@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import dagger.android.AndroidInjection
-import io.github.mehdi.presentation.viewModel.base.BaseViewModel
+import io.github.mehdi.presentation.presenters.base.BaseViewModel
 import javax.inject.Inject
 
 abstract class BaseActivity<V: BaseViewModel, B: ViewDataBinding>: AppCompatActivity(), BaseView<V, B>

@@ -19,8 +19,7 @@ ext {
     final retrofit = '2.4.0'
     final coroutineAdapter = '0.9.2'
     final stetho = '1.4.2'
-
-
+    final GlideVersion = '4.8.0'
 
 
     //Test
@@ -64,7 +63,11 @@ ext {
 
             //Stetho
             stetho               : "com.facebook.stetho:stetho:$stetho",
-            stetho_OkHttp        : "com.facebook.stetho:stetho-okhttp3:$stetho"
+            stetho_OkHttp        : "com.facebook.stetho:stetho-okhttp3:$stetho",
+
+            //GLIDE
+            glide                : "com.github.bumptech.glide:glide:$GlideVersion",
+            glideCompiler        : "com.github.bumptech.glide:compiler:$GlideVersion"
 
     ]
 

@@ -28,6 +28,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -37,6 +42,7 @@ dependencies {
     implementation project(':data')
     implementation project(':cache')
     implementation project(':remote')
+    implementation project(':presentation')
 
     def appDependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependencies

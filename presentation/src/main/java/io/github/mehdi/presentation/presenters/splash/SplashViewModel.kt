@@ -19,7 +19,7 @@ class SplashViewModel
             withContext(Dispatchers.IO){
                 delay(DELAY_TIME_IN_MILISECONDS)
             }
-           navigator.openMainPage()
+           activityAction{ navigator.openMainPage(it) }
         }
     }
 }

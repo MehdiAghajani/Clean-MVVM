@@ -6,8 +6,7 @@ import io.github.mehdi.clean.ui.splash.SplashNavigatorImpl
 import io.github.mehdi.presentation.presenters.splash.SplashNavigator
 
 @Module
-interface NavigatorBuilder
-{
+interface NavigatorBuilder {
     @Binds
-    fun bindSplashNavigator(splashNavigatorImpl: SplashNavigatorImpl): SplashNavigator
+    fun bindSplashNavigator(navigator: SplashNavigatorImpl): SplashNavigator
 }

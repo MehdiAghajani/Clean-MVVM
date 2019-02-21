@@ -10,6 +10,10 @@ import io.github.mehdi.presentation.presenters.main.home.HomeViewModel
 
 class HomeFragment: BaseFragment<HomeViewModel, FragmentHomeBinding>()
 {
+    companion object {
+        fun newInstance() = HomeFragment()
+    }
+
     override val viewModel: HomeViewModel by getLazyViewModel(ViewModelScope.FRAGMENT)
     override val layoutId: Int get() = R.layout.fragment_home
 

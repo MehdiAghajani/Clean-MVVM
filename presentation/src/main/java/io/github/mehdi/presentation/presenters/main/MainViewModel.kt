@@ -4,7 +4,12 @@ import io.github.mehdi.presentation.presenters.base.BaseViewModel
 import javax.inject.Inject
 
 class MainViewModel
-@Inject constructor(): BaseViewModel()
+@Inject constructor(
+    private val navigator: MainNavigator
+)
+    : BaseViewModel()
 {
-    fun openHomePage(){}
+    fun openHomePage(){
+        activityAction{ navigator.openHomePage(it) }
+    }
 }

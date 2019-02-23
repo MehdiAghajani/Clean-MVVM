@@ -10,6 +10,8 @@ dependencies {
     implementation appDependencies.kotlin
     implementation appDependencies.coroutine
 
+    implementation appDependencies.dagger
+
 }
 
 sourceCompatibility = "8"

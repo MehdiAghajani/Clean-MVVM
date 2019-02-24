@@ -7,7 +7,7 @@ class LocalStorageDataStore
 @Inject constructor(private val factory: LocalDataStoreFactory)
     : LocalStorageRepository
 {
-    override suspend fun saveToken(value: String) = factory.saveToken(value)
+    override suspend fun saveLastLaunch(value: Long) = factory.saveLastLaunch(value)
 
-    override suspend fun getToken() = factory.getToken()
+    override suspend fun getLastLaunch() = factory.getLastLaunch()
 }

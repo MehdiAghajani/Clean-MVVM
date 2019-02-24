@@ -2,6 +2,6 @@ package io.github.mehdi.data.repositories.storage
 
 interface StorageCache
 {
-    suspend fun saveToken(value: String)
-    suspend fun getToken(): String
+    suspend fun saveLastLaunch(value: Long)
+    suspend fun getLastLaunch(): Long
 }

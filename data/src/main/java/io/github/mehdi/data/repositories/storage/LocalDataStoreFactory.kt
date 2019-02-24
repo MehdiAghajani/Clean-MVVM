@@ -5,6 +5,6 @@ import javax.inject.Inject
 class LocalDataStoreFactory
 @Inject constructor(private val cache: StorageCache)
 {
-    suspend fun saveToken(value: String) = cache.saveToken(value)
-    suspend fun getToken() = cache.getToken()
+    suspend fun saveLastLaunch(value: Long) = cache.saveLastLaunch(value)
+    suspend fun getLastLaunch() = cache.getLastLaunch()
 }

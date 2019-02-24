@@ -8,13 +8,13 @@ class PreferenceImpl(context: Context) : StorageCache
     companion object {
         private const val PREF_NAME = "app_pref"
 
-        private const val TOKEN_KEY = "TokenKey"
+        private const val LAST_LAUNCH_KEY = "LastLaunchKey"
     }
 
     val prefs by lazy { context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE) }
 
 
-    override suspend fun saveToken(value: String) = prefs.edit().putString(TOKEN_KEY, value).apply()
+    override suspend fun saveLastLaunch(value: Long) = prefs.edit().putLong(LAST_LAUNCH_KEY, value).apply()
 
-    override suspend fun getToken() = prefs.getString(TOKEN_KEY, "")
+    override suspend fun getLastLaunch() = prefs.getLong(LAST_LAUNCH_KEY, System.currentTimeMillis())
 }

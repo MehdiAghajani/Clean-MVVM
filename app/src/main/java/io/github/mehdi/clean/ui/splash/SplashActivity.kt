@@ -1,5 +1,7 @@
 package io.github.mehdi.clean.ui.splash
 
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import io.github.mehdi.clean.R
 import io.github.mehdi.clean.databinding.ActivitySplashBinding
 import io.github.mehdi.clean.ui.base.BaseActivity
@@ -19,5 +21,12 @@ class SplashActivity: BaseActivity<SplashViewModel, ActivitySplashBinding>()
             .into(binding.imgPie)
 
         viewModel.openMainPage()
+        subscribeLiveData()
+    }
+
+    private fun subscribeLiveData(){
+        viewModel.dateTimeLiveData.observe(this, Observer {
+            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+        })
     }
 }

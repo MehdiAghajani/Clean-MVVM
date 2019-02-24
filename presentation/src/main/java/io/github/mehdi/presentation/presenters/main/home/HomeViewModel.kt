@@ -1,6 +1,7 @@
 package io.github.mehdi.presentation.presenters.main.home
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import io.github.mehdi.domain.model.DomainCountryModel
 import io.github.mehdi.domain.model.wrapper.APIResponse
 import io.github.mehdi.domain.model.wrapper.ErrorResponse
@@ -15,6 +16,9 @@ class HomeViewModel
 )
     : BaseViewModel()
 {
+
+    val countryListLiveData: MutableLiveData<List<DomainCountryModel>> = MutableLiveData()
+
     fun getCountryList(){
         getCountryUseCase.execute(jobLis, this::onCountryListResponse)
     }
@@ -22,7 +26,7 @@ class HomeViewModel
     private fun onCountryListResponse(response: APIResponse<List<DomainCountryModel>>){
         when(response){
             is SuccessResponse -> {
-                Log.d("Response", "Success")
+                countryListLiveData.value = response.value
             }
             is ErrorResponse -> {
                 Log.d("Response", "Error")

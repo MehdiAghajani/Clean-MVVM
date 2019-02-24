@@ -93,7 +93,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofitWithoutToken(okHttpClient: OkHttpClient, retrofitBuilder: Retrofit.Builder): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient, retrofitBuilder: Retrofit.Builder): Retrofit {
         return retrofitBuilder.client(okHttpClient).build()
     }
 

@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools" package="io.github.mehdi.clean">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
             android:name="io.github.mehdi.clean.app.CleanApplication"
             android:allowBackup="true"

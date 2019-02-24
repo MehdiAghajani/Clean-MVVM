@@ -19,5 +19,7 @@ class HomeFragment: BaseFragment<HomeViewModel, FragmentHomeBinding>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.viewModel = viewModel
+
+        viewModel.getCountryList()
     }
 }
